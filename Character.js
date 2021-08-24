@@ -1,12 +1,11 @@
 class Character{
 
-    constructor(name,offense,defense,characterType,description,backstory) {
+    constructor(name,offense,defense,speed,level) {
         this.name = name;
         this.offense = offense;
         this.defense = defense;
-        this.characterType = characterType;
-        this.description = description;
-        this.backstory  = backstory;
+        this.speed = speed;
+        this.level = level;
     }
 
     getName(){
@@ -17,20 +16,17 @@ class Character{
         return this.offense;
     }
 
+    getSpeed(){
+        return this.speed;
+    }
+
+    getLevel(){
+        return this.level;
+    }
+
+
     getDefense(){
         return this.defense;
-    }
-
-    getDescription(){
-        return this.description;
-    }
-
-    getCharacterType (){
-        return this.characterType;
-    }
-
-    getBackstory (){
-        return this.backstory;
     }
 
     setName(name){
@@ -38,17 +34,14 @@ class Character{
     }
 
     setOffense(offense){
-         this.offense = offense
+        this.offense = offense
+    }
+
+    setLevel(exp){
+        this.experience = exp;
     }
     setDefense(defense){
         this.defense = defense;
-    }
-
-    setCharacterType (characterType){
-     this.characterType = characterType;
-    }
-    setBackstory (backstory){
-        this.backstory = backstory;
     }
 
     toJson(){
@@ -64,3 +57,5 @@ class Character{
     }
 
 }
+
+module.exports =Character;
